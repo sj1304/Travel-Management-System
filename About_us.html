@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JourneyGenie</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* Background Slider */
+        body {
+            background: url('gallery/it.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-image 1.5s ease-in-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Navbar Logo */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 100px;
+            padding: 40px;
+            text-align: center;
+        }
+
+       .about-box {
+    background: rgba(0, 0, 0, 0.6); /* Transparent black */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+        .about-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        /* Social Icons */
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="gallery/logo.png" alt="Logo">
+                <span><i style="color:#4d739d;">J</i>ourney<i style="color:#4d739d;">G</i>enie</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="http://localhost:8082/siddhi/front.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://localhost:8082/siddhi/package.jsp">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="http://localhost:8082/siddhi/About_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="http://localhost:8082/siddhi/review.jsp">Review</a></li>
+                
+                </ul>
+                <a style="padding-left:20px; padding-top:10px; height:50px; width:100px;" href="user_pack.jsp">
+                    <i class="fa-solid fa-circle-user fa-2x" style="color:white; filter:opacity(0.7);"></i>
+                   </a>
+                <a href="LogoutServlet" class="btn btn-danger ms-3">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <div class="container content">
+        <h1 class="mb-4">About <span style="color:#4d739d;">JourneyGenie</span></h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="about-box">
+                    <i class="fas fa-globe fa-3x mb-3"></i>
+                    <h4>Global Reach</h4>
+                    <p>Explore the world with our well-curated international and domestic travel packages.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-box">
+                    <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+                    <h4>Tailored Experiences</h4>
+                    <p>Personalized itineraries designed to make your journey unforgettable.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-box">
+                    <i class="fas fa-star fa-3x mb-3"></i>
+                    <h4>Premium Services</h4>
+                    <p>Luxury accommodations and exclusive travel experiences at affordable prices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <p>&copy; 2025 JourneyGenie | All rights reserved</p>
+        <p><b>Phone:</b> 7385226044 | 9867896430</p>
+        <p><b>Email:</b> snehajadhav10573@gmail.com | anushkashinde1661@gmail.com</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
